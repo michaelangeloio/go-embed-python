@@ -2,23 +2,24 @@ package main
 
 import (
 	"fmt"
-	"github.com/gobwas/glob"
-	"github.com/klauspost/compress/zstd"
-	"github.com/michaelangeloio/go-embed-python/embed_util"
-	"github.com/michaelangeloio/go-embed-python/internal"
-	log "github.com/sirupsen/logrus"
 	"io"
 	"net/http"
 	"os"
 	"path/filepath"
 	"sync"
+
+	"github.com/gobwas/glob"
+	"github.com/klauspost/compress/zstd"
+	"github.com/michaelangeloio/go-embed-python/embed_util"
+	"github.com/michaelangeloio/go-embed-python/internal"
+	log "github.com/sirupsen/logrus"
 )
 
 // versions taken from https://github.com/indygreg/python-build-standalone/releases/
 const (
-	pythonVersionBase       = "3.10"
-	pythonVersionFull       = "3.10.9"
-	pythonStandaloneVersion = "20230116"
+	pythonVersionBase       = "3.12"
+	pythonVersionFull       = "3.12.0"
+	pythonStandaloneVersion = "20231002"
 )
 
 var archMapping = map[string]string{
@@ -36,7 +37,6 @@ var removeLibs = []string{
 	"multiprocessing",
 	"pydoc_data",
 	"site-packages",
-	"sqlite3",
 	"test",
 	"turtledemo",
 	"venv",
