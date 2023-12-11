@@ -17,9 +17,9 @@ import (
 
 // versions taken from https://github.com/indygreg/python-build-standalone/releases/
 const (
-	pythonVersionBase       = "3.12"
-	pythonVersionFull       = "3.12.0"
-	pythonStandaloneVersion = "20231002"
+	pythonVersionBase       = "3.11"
+	pythonVersionFull       = "3.11.5"
+	pythonStandaloneVersion = "20230826"
 )
 
 var archMapping = map[string]string{
